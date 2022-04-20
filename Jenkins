@@ -24,7 +24,6 @@ podTemplate(yaml: '''
           chmod +x gradlew
           ./gradlew acceptanceTest -D calculator.url=http://calculator-service:8080
 
-          cat build/reports/tests/acceptanceTest/index.html
 
 
         '''
