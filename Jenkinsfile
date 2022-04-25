@@ -19,7 +19,7 @@ podTemplate(yaml: '''
         stage('test calculator') {
           sh '''
           test $(curl calculator-service:8080/sum?a=1\\&b=2) -eq 3
-          test $(curl calculator-service:8080/div?a=10\\&b=10) -eq 1
+          test $(curl calculator-service:8080/div?a=10\\&b=0) -eq 1
 
           chmod +x gradlew
           ./gradlew acceptanceTest -D calculator.url=http://calculator-service:8080
